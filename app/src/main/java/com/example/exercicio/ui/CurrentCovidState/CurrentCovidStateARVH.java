@@ -34,7 +34,7 @@ public class CurrentCovidStateARVH extends RecyclerView.Adapter<CurrentCovidStat
 
     @Override
     public void onBindViewHolder(@NonNull CurrentCovidStateRVH holder, int position) {
-        holder.getTextView().setText(this.currentCovidStateList.get(position).date);
+        holder.setCurrentCovidState(this.currentCovidStateList.get(position));
     }
 
     @Override

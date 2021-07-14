@@ -34,7 +34,7 @@ public class HistoryCovidCountryARVH extends RecyclerView.Adapter<HistoryCovidCo
 
     @Override
     public void onBindViewHolder(@NonNull HistoryCovidCountryRVH holder, int position) {
-        holder.getTextView().setText(this.historyCovidCountryList.get(position).date);
+        holder.setHistoryCovidCountry(this.historyCovidCountryList.get(position));
     }
 
     @Override

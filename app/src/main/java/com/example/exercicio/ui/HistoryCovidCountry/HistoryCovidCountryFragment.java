@@ -21,19 +21,21 @@ public class HistoryCovidCountryFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_history_covid_country, container, false);
 
-        HistoryCovidCountry historyCovidCountry1 = new HistoryCovidCountry();
-        historyCovidCountry1.date = "Cachorro";
-
-        HistoryCovidCountry historyCovidCountry2 = new HistoryCovidCountry();
-        historyCovidCountry2.date = "Gato";
-
-        HistoryCovidCountry historyCovidCountry3 = new HistoryCovidCountry();
-        historyCovidCountry3.date = "Elefante";
+        HistoryCovidCountry historyCovidCountry = new HistoryCovidCountry();
+        historyCovidCountry.date = "date";
+        historyCovidCountry.states = "states";
+        historyCovidCountry.positive = "positive";
+        historyCovidCountry.negative = "negative";
+        historyCovidCountry.hospitalizedCurrently = "hospitalizedCurrently";
+        historyCovidCountry.hospitalizedCumulative = "hospitalizedCumulative";
+        historyCovidCountry.recovered = "recovered";
+        historyCovidCountry.death = "death";
 
         List<HistoryCovidCountry> historyCovidCountryList = new ArrayList<>();
-        historyCovidCountryList.add(historyCovidCountry1);
-        historyCovidCountryList.add(historyCovidCountry2);
-        historyCovidCountryList.add(historyCovidCountry3);
+        historyCovidCountryList.add(historyCovidCountry);
+        historyCovidCountryList.add(historyCovidCountry);
+        historyCovidCountryList.add(historyCovidCountry);
+        historyCovidCountryList.add(historyCovidCountry);
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);

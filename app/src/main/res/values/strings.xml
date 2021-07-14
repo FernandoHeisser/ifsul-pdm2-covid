@@ -3,4 +3,15 @@
     <string name="title_history_covid_state">History States</string>
     <string name="title_current_covid_state">Current States</string>
     <string name="title_history_covid_country">History Country</string>
+    <string name="state">State:&#160;</string>
+    <string name="death">Death:&#160;</string>
+    <string name="probable_cases">Probable Cases:&#160;</string>
+    <string name="recovered">Recovered:&#160;</string>
+    <string name="hospitalized_currently">Hospitalized Currently:&#160;</string>
+    <string name="date">Date:&#160;</string>
+    <string name="positive">Positive:&#160;</string>
+    <string name="total_test_results">Total Test Results:&#160;</string>
+    <string name="hospitalized_cumulative">Hospitalized Cumulative:&#160;</string>
+    <string name="negative">Negative:&#160;</string>
+    <string name="states">States:&#160;</string>
 </resources>

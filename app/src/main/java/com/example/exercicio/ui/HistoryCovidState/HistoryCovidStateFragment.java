@@ -21,19 +21,23 @@ public class HistoryCovidStateFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_history_covid_state, container, false);
 
-        HistoryCovidState historyCovidState1 = new HistoryCovidState();
-        historyCovidState1.date = "Lasanha";
-
-        HistoryCovidState historyCovidState2 = new HistoryCovidState();
-        historyCovidState2.date = "Churrasco";
-
-        HistoryCovidState historyCovidState3 = new HistoryCovidState();
-        historyCovidState3.date = "Salada";
+        HistoryCovidState historyCovidState = new HistoryCovidState();
+        historyCovidState.date = "date";
+        historyCovidState.state = "state";
+        historyCovidState.positive = "positive";
+        historyCovidState.probableCases = "probableCases";
+        historyCovidState.negative = "negative";
+        historyCovidState.totalTestResults = "totalTestResults";
+        historyCovidState.hospitalizedCurrently = "hospitalizedCurrently";
+        historyCovidState.hospitalizedCumulative = "hospitalizedCumulative";
+        historyCovidState.recovered = "recovered";
+        historyCovidState.death = "death";
 
         List<HistoryCovidState> historyCovidStateList = new ArrayList<>();
-        historyCovidStateList.add(historyCovidState1);
-        historyCovidStateList.add(historyCovidState2);
-        historyCovidStateList.add(historyCovidState3);
+        historyCovidStateList.add(historyCovidState);
+        historyCovidStateList.add(historyCovidState);
+        historyCovidStateList.add(historyCovidState);
+        historyCovidStateList.add(historyCovidState);
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);

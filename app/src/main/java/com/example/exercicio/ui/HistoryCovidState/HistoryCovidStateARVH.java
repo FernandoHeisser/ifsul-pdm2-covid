@@ -21,7 +21,7 @@ public class HistoryCovidStateARVH extends RecyclerView.Adapter<HistoryCovidStat
 
     @Override
     public int getItemViewType(final int position) {
-        return R.layout.current_covid_state_item;
+        return R.layout.history_covid_state_item;
     }
 
     @NonNull
@@ -34,7 +34,7 @@ public class HistoryCovidStateARVH extends RecyclerView.Adapter<HistoryCovidStat
 
     @Override
     public void onBindViewHolder(@NonNull HistoryCovidStateRVH holder, int position) {
-        holder.getTextView().setText(this.historyCovidStateList.get(position).date);
+        holder.setHistoryCovidState(this.historyCovidStateList.get(position));
     }
 
     @Override

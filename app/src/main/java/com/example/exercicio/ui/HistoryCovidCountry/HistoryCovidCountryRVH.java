@@ -12,14 +12,36 @@ import org.jetbrains.annotations.NotNull;
 
 public class HistoryCovidCountryRVH extends RecyclerView.ViewHolder {
 
-    private final TextView textView;
+    private final TextView dateTextView;
+    private final TextView statesTextView;
+    private final TextView positiveTextView;
+    private final TextView negativeTextView;
+    private final TextView hospitalizedCurrentlyTextView;
+    private final TextView hospitalizedCumulativeTextView;
+    private final TextView deathTextView;
+    private final TextView recoveredTextView;
 
     public HistoryCovidCountryRVH(@NonNull @NotNull View itemView) {
         super(itemView);
-        textView = itemView.findViewById(R.id.textView);
+        dateTextView = itemView.findViewById(R.id.dateValueHCC);
+        statesTextView = itemView.findViewById(R.id.statesValueHCC);
+        positiveTextView = itemView.findViewById(R.id.positiveValueHCC);
+        negativeTextView = itemView.findViewById(R.id.negativeValueHCC);
+        hospitalizedCurrentlyTextView = itemView.findViewById(R.id.hospitalizedCurrentlyValueHCC);
+        hospitalizedCumulativeTextView = itemView.findViewById(R.id.hospitalizedCumulativeValueHCC);
+        deathTextView = itemView.findViewById(R.id.deathValueHCC);
+        recoveredTextView = itemView.findViewById(R.id.recoveredValueHCC);
     }
 
-    public TextView getTextView() {
-        return textView;
+    public void setHistoryCovidCountry(HistoryCovidCountry historyCovidCountry) {
+
+        dateTextView.setText(historyCovidCountry.date);
+        statesTextView.setText(historyCovidCountry.states);
+        positiveTextView.setText(historyCovidCountry.positive);
+        negativeTextView.setText(historyCovidCountry.negative);
+        hospitalizedCurrentlyTextView.setText(historyCovidCountry.hospitalizedCurrently);
+        hospitalizedCumulativeTextView.setText(historyCovidCountry.hospitalizedCumulative);
+        recoveredTextView.setText(historyCovidCountry.recovered);
+        deathTextView.setText(historyCovidCountry.death);
     }
 }
