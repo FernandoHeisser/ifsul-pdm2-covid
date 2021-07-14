@@ -37,17 +37,17 @@ public class HistoryCovidStateRVH extends RecyclerView.ViewHolder {
         deathTextView = itemView.findViewById(R.id.deathValueHCS);
     }
 
-    public void setHistoryCovidState(HistoryCovidState historyCovidState) {
+    public void setHistoryCovidState(HistoryCovidStateDTO historyCovidStateDTO) {
 
-        dateTextView.setText(historyCovidState.date);
-        stateTextView.setText(historyCovidState.state);
-        positiveTextView.setText(historyCovidState.positive);
-        probableCasesTextView.setText(historyCovidState.probableCases);
-        negativeTextView.setText(historyCovidState.negative);
-        totalTestResultsTextView.setText(historyCovidState.totalTestResults);
-        hospitalizedCurrentlyTextView.setText(historyCovidState.hospitalizedCurrently);
-        hospitalizedCumulativeTextView.setText(historyCovidState.hospitalizedCumulative);
-        recoveredTextView.setText(historyCovidState.recovered);
-        deathTextView.setText(historyCovidState.death);
+        dateTextView.setText(historyCovidStateDTO.date);
+        stateTextView.setText(historyCovidStateDTO.state);
+        positiveTextView.setText(historyCovidStateDTO.positive);
+        probableCasesTextView.setText(historyCovidStateDTO.probableCases);
+        negativeTextView.setText(historyCovidStateDTO.negative);
+        totalTestResultsTextView.setText(historyCovidStateDTO.totalTestResults);
+        hospitalizedCurrentlyTextView.setText(historyCovidStateDTO.hospitalizedCurrently);
+        hospitalizedCumulativeTextView.setText(historyCovidStateDTO.hospitalizedCumulative);
+        recoveredTextView.setText(historyCovidStateDTO.recovered);
+        deathTextView.setText(historyCovidStateDTO.death);
     }
 }

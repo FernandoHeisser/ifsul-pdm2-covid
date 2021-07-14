@@ -13,10 +13,10 @@ import java.util.List;
 
 public class CurrentCovidStateARVH extends RecyclerView.Adapter<CurrentCovidStateRVH> {
 
-    private final List<CurrentCovidState> currentCovidStateList;
+    private final List<CurrentCovidStateDTO> currentCovidStateDTOList;
 
-    public CurrentCovidStateARVH(List<CurrentCovidState> currentCovidStateList) {
-        this.currentCovidStateList = currentCovidStateList;
+    public CurrentCovidStateARVH(List<CurrentCovidStateDTO> currentCovidStateDTOList) {
+        this.currentCovidStateDTOList = currentCovidStateDTOList;
     }
 
     @Override
@@ -34,11 +34,11 @@ public class CurrentCovidStateARVH extends RecyclerView.Adapter<CurrentCovidStat
 
     @Override
     public void onBindViewHolder(@NonNull CurrentCovidStateRVH holder, int position) {
-        holder.setCurrentCovidState(this.currentCovidStateList.get(position));
+        holder.setCurrentCovidState(this.currentCovidStateDTOList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return currentCovidStateList.size();
+        return currentCovidStateDTOList.size();
     }
 }

@@ -13,10 +13,10 @@ import java.util.List;
 
 public class HistoryCovidCountryARVH extends RecyclerView.Adapter<HistoryCovidCountryRVH> {
 
-    private final List<HistoryCovidCountry> historyCovidCountryList;
+    private final List<HistoryCovidCountryDTO> historyCovidCountryDTOList;
 
-    public HistoryCovidCountryARVH(List<HistoryCovidCountry> historyCovidCountryList) {
-        this.historyCovidCountryList = historyCovidCountryList;
+    public HistoryCovidCountryARVH(List<HistoryCovidCountryDTO> historyCovidCountryDTOList) {
+        this.historyCovidCountryDTOList = historyCovidCountryDTOList;
     }
 
     @Override
@@ -34,11 +34,11 @@ public class HistoryCovidCountryARVH extends RecyclerView.Adapter<HistoryCovidCo
 
     @Override
     public void onBindViewHolder(@NonNull HistoryCovidCountryRVH holder, int position) {
-        holder.setHistoryCovidCountry(this.historyCovidCountryList.get(position));
+        holder.setHistoryCovidCountry(this.historyCovidCountryDTOList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return historyCovidCountryList.size();
+        return historyCovidCountryDTOList.size();
     }
 }

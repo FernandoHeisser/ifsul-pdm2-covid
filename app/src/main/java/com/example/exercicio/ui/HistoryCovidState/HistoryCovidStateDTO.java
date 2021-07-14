@@ -1,6 +1,6 @@
 package com.example.exercicio.ui.HistoryCovidState;
 
-public class HistoryCovidState {
+public class HistoryCovidStateDTO {
 
     public String date;
     public String state;
@@ -13,7 +13,7 @@ public class HistoryCovidState {
     public String recovered;
     public String death;
 
-    public HistoryCovidState() {
+    public HistoryCovidStateDTO() {
 
     }
 }

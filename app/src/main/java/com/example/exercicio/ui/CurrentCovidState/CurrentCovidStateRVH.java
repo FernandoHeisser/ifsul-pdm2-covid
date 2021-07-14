@@ -38,17 +38,17 @@ public class CurrentCovidStateRVH extends RecyclerView.ViewHolder {
 
     }
 
-    public void setCurrentCovidState(CurrentCovidState currentCovidState) {
+    public void setCurrentCovidState(CurrentCovidStateDTO currentCovidStateDTO) {
 
-        dateTextView.setText(currentCovidState.date);
-        stateTextView.setText(currentCovidState.state);
-        positiveTextView.setText(currentCovidState.positive);
-        probableCasesTextView.setText(currentCovidState.probableCases);
-        negativeTextView.setText(currentCovidState.negative);
-        totalTestResultsTextView.setText(currentCovidState.totalTestResults);
-        hospitalizedCurrentlyTextView.setText(currentCovidState.hospitalizedCurrently);
-        hospitalizedCumulativeTextView.setText(currentCovidState.hospitalizedCumulative);
-        recoveredTextView.setText(currentCovidState.recovered);
-        deathTextView.setText(currentCovidState.death);
+        dateTextView.setText(currentCovidStateDTO.date);
+        stateTextView.setText(currentCovidStateDTO.state);
+        positiveTextView.setText(currentCovidStateDTO.positive);
+        probableCasesTextView.setText(currentCovidStateDTO.probableCases);
+        negativeTextView.setText(currentCovidStateDTO.negative);
+        totalTestResultsTextView.setText(currentCovidStateDTO.totalTestResults);
+        hospitalizedCurrentlyTextView.setText(currentCovidStateDTO.hospitalizedCurrently);
+        hospitalizedCumulativeTextView.setText(currentCovidStateDTO.hospitalizedCumulative);
+        recoveredTextView.setText(currentCovidStateDTO.recovered);
+        deathTextView.setText(currentCovidStateDTO.death);
     }
 }

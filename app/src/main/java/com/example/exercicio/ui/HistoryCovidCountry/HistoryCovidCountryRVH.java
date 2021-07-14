@@ -33,15 +33,15 @@ public class HistoryCovidCountryRVH extends RecyclerView.ViewHolder {
         recoveredTextView = itemView.findViewById(R.id.recoveredValueHCC);
     }
 
-    public void setHistoryCovidCountry(HistoryCovidCountry historyCovidCountry) {
+    public void setHistoryCovidCountry(HistoryCovidCountryDTO historyCovidCountryDTO) {
 
-        dateTextView.setText(historyCovidCountry.date);
-        statesTextView.setText(historyCovidCountry.states);
-        positiveTextView.setText(historyCovidCountry.positive);
-        negativeTextView.setText(historyCovidCountry.negative);
-        hospitalizedCurrentlyTextView.setText(historyCovidCountry.hospitalizedCurrently);
-        hospitalizedCumulativeTextView.setText(historyCovidCountry.hospitalizedCumulative);
-        recoveredTextView.setText(historyCovidCountry.recovered);
-        deathTextView.setText(historyCovidCountry.death);
+        dateTextView.setText(historyCovidCountryDTO.date);
+        statesTextView.setText(historyCovidCountryDTO.states);
+        positiveTextView.setText(historyCovidCountryDTO.positive);
+        negativeTextView.setText(historyCovidCountryDTO.negative);
+        hospitalizedCurrentlyTextView.setText(historyCovidCountryDTO.hospitalizedCurrently);
+        hospitalizedCumulativeTextView.setText(historyCovidCountryDTO.hospitalizedCumulative);
+        recoveredTextView.setText(historyCovidCountryDTO.recovered);
+        deathTextView.setText(historyCovidCountryDTO.death);
     }
 }

@@ -21,28 +21,28 @@ public class HistoryCovidStateFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_history_covid_state, container, false);
 
-        HistoryCovidState historyCovidState = new HistoryCovidState();
-        historyCovidState.date = "date";
-        historyCovidState.state = "state";
-        historyCovidState.positive = "positive";
-        historyCovidState.probableCases = "probableCases";
-        historyCovidState.negative = "negative";
-        historyCovidState.totalTestResults = "totalTestResults";
-        historyCovidState.hospitalizedCurrently = "hospitalizedCurrently";
-        historyCovidState.hospitalizedCumulative = "hospitalizedCumulative";
-        historyCovidState.recovered = "recovered";
-        historyCovidState.death = "death";
+        HistoryCovidStateDTO historyCovidStateDTO = new HistoryCovidStateDTO();
+        historyCovidStateDTO.date = "date";
+        historyCovidStateDTO.state = "state";
+        historyCovidStateDTO.positive = "positive";
+        historyCovidStateDTO.probableCases = "probableCases";
+        historyCovidStateDTO.negative = "negative";
+        historyCovidStateDTO.totalTestResults = "totalTestResults";
+        historyCovidStateDTO.hospitalizedCurrently = "hospitalizedCurrently";
+        historyCovidStateDTO.hospitalizedCumulative = "hospitalizedCumulative";
+        historyCovidStateDTO.recovered = "recovered";
+        historyCovidStateDTO.death = "death";
 
-        List<HistoryCovidState> historyCovidStateList = new ArrayList<>();
-        historyCovidStateList.add(historyCovidState);
-        historyCovidStateList.add(historyCovidState);
-        historyCovidStateList.add(historyCovidState);
-        historyCovidStateList.add(historyCovidState);
+        List<HistoryCovidStateDTO> historyCovidStateDTOList = new ArrayList<>();
+        historyCovidStateDTOList.add(historyCovidStateDTO);
+        historyCovidStateDTOList.add(historyCovidStateDTO);
+        historyCovidStateDTOList.add(historyCovidStateDTO);
+        historyCovidStateDTOList.add(historyCovidStateDTO);
 
         RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        recyclerView.setAdapter(new HistoryCovidStateARVH(historyCovidStateList));
+        recyclerView.setAdapter(new HistoryCovidStateARVH(historyCovidStateDTOList));
 
         return view;
     }
