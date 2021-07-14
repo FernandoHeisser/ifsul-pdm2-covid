@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_history_covid_state">
+
+    <fragment
+        android:id="@+id/navigation_history_covid_state"
+        android:name="com.example.exercicio.ui.HistoryCovidState.HistoryCovidStateFragment"
+        android:label="@string/title_history_covid_state"
+        tools:layout="@layout/fragment_history_covid_state" />
+
+    <fragment
+        android:id="@+id/navigation_current_covid_state"
+        android:name="com.example.exercicio.ui.CurrentCovidState.CurrentCovidStateFragment"
+        android:label="@string/title_current_covid_state"
+        tools:layout="@layout/fragment_current_covid_state" />
+
+    <fragment
+        android:id="@+id/navigation_history_covid_country"
+        android:name="com.example.exercicio.ui.HistoryCovidCountry.HistoryCovidCountryFragment"
+        android:label="@string/title_history_covid_country"
+        tools:layout="@layout/fragment_history_covid_country" />
+</navigation>
