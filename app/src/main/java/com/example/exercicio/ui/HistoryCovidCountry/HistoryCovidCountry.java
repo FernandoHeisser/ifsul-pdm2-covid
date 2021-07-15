@@ -1,4 +1,4 @@
-package com.example.exercicio.service;
+package com.example.exercicio.ui.HistoryCovidCountry;
 
 public class HistoryCovidCountry {
 

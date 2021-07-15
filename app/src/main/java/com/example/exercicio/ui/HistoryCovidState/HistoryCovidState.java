@@ -1,6 +1,6 @@
-package com.example.exercicio.service;
+package com.example.exercicio.ui.HistoryCovidState;
 
-public class CurrentCovidState {
+public class HistoryCovidState {
 
     public String date;
     public String state;
@@ -59,7 +59,7 @@ public class CurrentCovidState {
     public String score;
     public String grade;
 
-    public CurrentCovidState() {
+    public HistoryCovidState() {
 
     }
 }
