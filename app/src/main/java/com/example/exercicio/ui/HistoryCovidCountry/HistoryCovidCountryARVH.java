@@ -16,7 +16,8 @@ public class HistoryCovidCountryARVH extends RecyclerView.Adapter<HistoryCovidCo
 
     private final List<HistoryCovidCountryDTO> historyCovidCountryDTOList;
 
-    public HistoryCovidCountryARVH() {HistoryCovidCountryDTO historyCovidCountryDTO = new HistoryCovidCountryDTO();
+    public HistoryCovidCountryARVH(List<HistoryCovidCountry> historyCovidCountryList) {
+        HistoryCovidCountryDTO historyCovidCountryDTO = new HistoryCovidCountryDTO();
         historyCovidCountryDTO.date = "date";
         historyCovidCountryDTO.states = "states";
         historyCovidCountryDTO.positive = "positive";

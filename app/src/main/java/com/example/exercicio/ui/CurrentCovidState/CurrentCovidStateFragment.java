@@ -11,10 +11,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.exercicio.R;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.List;
 import java.util.Objects;
 
 import okhttp3.Call;
@@ -28,6 +32,8 @@ import okhttp3.ResponseBody;
 public class CurrentCovidStateFragment extends Fragment {
 
     private final OkHttpClient client = new OkHttpClient();
+
+    private List<CurrentCovidState> currentCovidStateList;
 
     public void getCurrentCovidStateFromAPI() {
         Request request = new Request.Builder()
@@ -48,7 +54,8 @@ public class CurrentCovidStateFragment extends Fragment {
                         System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
                     }
 
-                    System.out.println(Objects.requireNonNull(responseBody).string());
+                    Type listType = new TypeToken<List<CurrentCovidState>>(){}.getType();
+                    currentCovidStateList = new Gson().fromJson(Objects.requireNonNull(responseBody).string(), listType);
                 }
             }
         });
@@ -58,10 +65,11 @@ public class CurrentCovidStateFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_current_covid_state, container, false);
 
+        getCurrentCovidStateFromAPI();
         RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        recyclerView.setAdapter(new CurrentCovidStateARVH());
+        recyclerView.setAdapter(new CurrentCovidStateARVH(currentCovidStateList));
 
         return view;
     }

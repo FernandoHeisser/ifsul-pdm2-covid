@@ -16,7 +16,7 @@ public class CurrentCovidStateARVH extends RecyclerView.Adapter<CurrentCovidStat
 
     private final List<CurrentCovidStateDTO> currentCovidStateDTOList;
 
-    public CurrentCovidStateARVH() {
+    public CurrentCovidStateARVH(List<CurrentCovidState> currentCovidStateList) {
         CurrentCovidStateDTO currentCovidStateDTO = new CurrentCovidStateDTO();
         currentCovidStateDTO.date = "date";
         currentCovidStateDTO.state = "state";
