@@ -9,13 +9,32 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.exercicio.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CurrentCovidStateARVH extends RecyclerView.Adapter<CurrentCovidStateRVH> {
 
     private final List<CurrentCovidStateDTO> currentCovidStateDTOList;
 
-    public CurrentCovidStateARVH(List<CurrentCovidStateDTO> currentCovidStateDTOList) {
+    public CurrentCovidStateARVH() {
+        CurrentCovidStateDTO currentCovidStateDTO = new CurrentCovidStateDTO();
+        currentCovidStateDTO.date = "date";
+        currentCovidStateDTO.state = "state";
+        currentCovidStateDTO.positive = "positive";
+        currentCovidStateDTO.probableCases = "probableCases";
+        currentCovidStateDTO.negative = "negative";
+        currentCovidStateDTO.totalTestResults = "totalTestResults";
+        currentCovidStateDTO.hospitalizedCurrently = "hospitalizedCurrently";
+        currentCovidStateDTO.hospitalizedCumulative = "hospitalizedCumulative";
+        currentCovidStateDTO.recovered = "recovered";
+        currentCovidStateDTO.death = "death";
+
+        List<CurrentCovidStateDTO> currentCovidStateDTOList = new ArrayList<>();
+        currentCovidStateDTOList.add(currentCovidStateDTO);
+        currentCovidStateDTOList.add(currentCovidStateDTO);
+        currentCovidStateDTOList.add(currentCovidStateDTO);
+        currentCovidStateDTOList.add(currentCovidStateDTO);
+
         this.currentCovidStateDTOList = currentCovidStateDTOList;
     }
 

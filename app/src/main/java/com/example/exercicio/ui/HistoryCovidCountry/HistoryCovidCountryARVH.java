@@ -9,13 +9,30 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.exercicio.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HistoryCovidCountryARVH extends RecyclerView.Adapter<HistoryCovidCountryRVH> {
 
     private final List<HistoryCovidCountryDTO> historyCovidCountryDTOList;
 
-    public HistoryCovidCountryARVH(List<HistoryCovidCountryDTO> historyCovidCountryDTOList) {
+    public HistoryCovidCountryARVH() {
+        HistoryCovidCountryDTO historyCovidCountryDTO = new HistoryCovidCountryDTO();
+        historyCovidCountryDTO.date = "date";
+        historyCovidCountryDTO.states = "states";
+        historyCovidCountryDTO.positive = "positive";
+        historyCovidCountryDTO.negative = "negative";
+        historyCovidCountryDTO.hospitalizedCurrently = "hospitalizedCurrently";
+        historyCovidCountryDTO.hospitalizedCumulative = "hospitalizedCumulative";
+        historyCovidCountryDTO.recovered = "recovered";
+        historyCovidCountryDTO.death = "death";
+
+        List<HistoryCovidCountryDTO> historyCovidCountryDTOList = new ArrayList<>();
+        historyCovidCountryDTOList.add(historyCovidCountryDTO);
+        historyCovidCountryDTOList.add(historyCovidCountryDTO);
+        historyCovidCountryDTOList.add(historyCovidCountryDTO);
+        historyCovidCountryDTOList.add(historyCovidCountryDTO);
+
         this.historyCovidCountryDTOList = historyCovidCountryDTOList;
     }
 
