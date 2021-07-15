@@ -30,7 +30,7 @@ public class HistoryCovidStateARVH extends RecyclerView.Adapter<HistoryCovidStat
     private final List<HistoryCovidStateDTO> historyCovidStateDTOList;
 
     public HistoryCovidStateARVH() {
-        run();
+        getHistoryCovidStateFromAPI();
 
         HistoryCovidStateDTO historyCovidStateDTO = new HistoryCovidStateDTO();
         historyCovidStateDTO.date = "date";
@@ -76,7 +76,7 @@ public class HistoryCovidStateARVH extends RecyclerView.Adapter<HistoryCovidStat
         return historyCovidStateDTOList.size();
     }
 
-    public void run() {
+    public void getHistoryCovidStateFromAPI() {
         Request request = new Request.Builder()
                 .url("https://api.covidtracking.com/v1/states/daily.json")
                 .build();

@@ -30,7 +30,7 @@ public class CurrentCovidStateARVH extends RecyclerView.Adapter<CurrentCovidStat
     private final List<CurrentCovidStateDTO> currentCovidStateDTOList;
 
     public CurrentCovidStateARVH() {
-        run();
+        getCurrentCovidStateFromAPI();
 
         CurrentCovidStateDTO currentCovidStateDTO = new CurrentCovidStateDTO();
         currentCovidStateDTO.date = "date";
@@ -76,7 +76,7 @@ public class CurrentCovidStateARVH extends RecyclerView.Adapter<CurrentCovidStat
         return currentCovidStateDTOList.size();
     }
 
-    public void run() {
+    public void getCurrentCovidStateFromAPI() {
         Request request = new Request.Builder()
                 .url("https://api.covidtracking.com/v1/states/current.json")
                 .build();
