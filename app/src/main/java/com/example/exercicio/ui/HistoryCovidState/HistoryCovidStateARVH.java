@@ -19,25 +19,21 @@ public class HistoryCovidStateARVH extends RecyclerView.Adapter<HistoryCovidStat
     public HistoryCovidStateARVH(List<HistoryCovidState> historyCovidStateList) {
         List<HistoryCovidStateDTO> historyCovidStateDTOList = new ArrayList<>();
 
-        if (historyCovidStateList != null) {
-            for (HistoryCovidState historyCovidState : historyCovidStateList) {
-                HistoryCovidStateDTO historyCovidStateDTO = new HistoryCovidStateDTO();
-                historyCovidStateDTO.date = historyCovidState.date;
-                historyCovidStateDTO.state = historyCovidState.state;
-                historyCovidStateDTO.positive = historyCovidState.positive;
-                historyCovidStateDTO.probableCases = historyCovidState.probableCases;
-                historyCovidStateDTO.negative = historyCovidState.negative;
-                historyCovidStateDTO.totalTestResults = historyCovidState.totalTestResults;
-                historyCovidStateDTO.hospitalizedCurrently = historyCovidState.hospitalizedCurrently;
-                historyCovidStateDTO.hospitalizedCumulative = historyCovidState.hospitalizedCumulative;
-                historyCovidStateDTO.recovered = historyCovidState.recovered;
-                historyCovidStateDTO.death = historyCovidState.death;
-                historyCovidStateDTOList.add(historyCovidStateDTO);
-            }
-            this.historyCovidStateDTOList = historyCovidStateDTOList;
-        } else {
-            this.historyCovidStateDTOList = List.of(new HistoryCovidStateDTO());
+        for (HistoryCovidState historyCovidState : historyCovidStateList) {
+            HistoryCovidStateDTO historyCovidStateDTO = new HistoryCovidStateDTO();
+            historyCovidStateDTO.date = historyCovidState.date;
+            historyCovidStateDTO.state = historyCovidState.state;
+            historyCovidStateDTO.positive = historyCovidState.positive;
+            historyCovidStateDTO.probableCases = historyCovidState.probableCases;
+            historyCovidStateDTO.negative = historyCovidState.negative;
+            historyCovidStateDTO.totalTestResults = historyCovidState.totalTestResults;
+            historyCovidStateDTO.hospitalizedCurrently = historyCovidState.hospitalizedCurrently;
+            historyCovidStateDTO.hospitalizedCumulative = historyCovidState.hospitalizedCumulative;
+            historyCovidStateDTO.recovered = historyCovidState.recovered;
+            historyCovidStateDTO.death = historyCovidState.death;
+            historyCovidStateDTOList.add(historyCovidStateDTO);
         }
+        this.historyCovidStateDTOList = historyCovidStateDTOList;
     }
 
     @Override
