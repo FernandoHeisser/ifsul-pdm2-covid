@@ -9,9 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.exercicio.R;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -77,11 +80,11 @@ public class HistoryCovidCountryARVH extends RecyclerView.Adapter<HistoryCovidCo
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
-            @Override public void onFailure(Call call, IOException e) {
+            @Override public void onFailure(@NotNull Call call, @NotNull IOException e) {
                 e.printStackTrace();
             }
 
-            @Override public void onResponse(Call call, Response response) throws IOException {
+            @Override public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 try (ResponseBody responseBody = response.body()) {
                     if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
 
@@ -90,7 +93,7 @@ public class HistoryCovidCountryARVH extends RecyclerView.Adapter<HistoryCovidCo
                         System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
                     }
 
-                    System.out.println(responseBody.string());
+                    System.out.println(Objects.requireNonNull(responseBody).string());
                 }
             }
         });
