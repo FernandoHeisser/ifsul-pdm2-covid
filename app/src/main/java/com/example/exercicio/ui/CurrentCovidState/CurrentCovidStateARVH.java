@@ -17,24 +17,22 @@ public class CurrentCovidStateARVH extends RecyclerView.Adapter<CurrentCovidStat
     private final List<CurrentCovidStateDTO> currentCovidStateDTOList;
 
     public CurrentCovidStateARVH(List<CurrentCovidState> currentCovidStateList) {
-        CurrentCovidStateDTO currentCovidStateDTO = new CurrentCovidStateDTO();
-        currentCovidStateDTO.date = "date";
-        currentCovidStateDTO.state = "state";
-        currentCovidStateDTO.positive = "positive";
-        currentCovidStateDTO.probableCases = "probableCases";
-        currentCovidStateDTO.negative = "negative";
-        currentCovidStateDTO.totalTestResults = "totalTestResults";
-        currentCovidStateDTO.hospitalizedCurrently = "hospitalizedCurrently";
-        currentCovidStateDTO.hospitalizedCumulative = "hospitalizedCumulative";
-        currentCovidStateDTO.recovered = "recovered";
-        currentCovidStateDTO.death = "death";
-
         List<CurrentCovidStateDTO> currentCovidStateDTOList = new ArrayList<>();
-        currentCovidStateDTOList.add(currentCovidStateDTO);
-        currentCovidStateDTOList.add(currentCovidStateDTO);
-        currentCovidStateDTOList.add(currentCovidStateDTO);
-        currentCovidStateDTOList.add(currentCovidStateDTO);
 
+        for (CurrentCovidState currentCovidState : currentCovidStateList) {
+            CurrentCovidStateDTO currentCovidStateDTO = new CurrentCovidStateDTO();
+            currentCovidStateDTO.date = currentCovidState.date;
+            currentCovidStateDTO.state = currentCovidState.state;
+            currentCovidStateDTO.positive = currentCovidState.positive;
+            currentCovidStateDTO.probableCases = currentCovidState.probableCases;
+            currentCovidStateDTO.negative = currentCovidState.negative;
+            currentCovidStateDTO.totalTestResults = currentCovidState.totalTestResults;
+            currentCovidStateDTO.hospitalizedCurrently = currentCovidState.hospitalizedCurrently;
+            currentCovidStateDTO.hospitalizedCumulative = currentCovidState.hospitalizedCumulative;
+            currentCovidStateDTO.recovered = currentCovidState.recovered;
+            currentCovidStateDTO.death = currentCovidState.death;
+            currentCovidStateDTOList.add(currentCovidStateDTO);
+        }
         this.currentCovidStateDTOList = currentCovidStateDTOList;
     }
 

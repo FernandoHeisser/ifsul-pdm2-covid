@@ -17,22 +17,20 @@ public class HistoryCovidCountryARVH extends RecyclerView.Adapter<HistoryCovidCo
     private final List<HistoryCovidCountryDTO> historyCovidCountryDTOList;
 
     public HistoryCovidCountryARVH(List<HistoryCovidCountry> historyCovidCountryList) {
-        HistoryCovidCountryDTO historyCovidCountryDTO = new HistoryCovidCountryDTO();
-        historyCovidCountryDTO.date = "date";
-        historyCovidCountryDTO.states = "states";
-        historyCovidCountryDTO.positive = "positive";
-        historyCovidCountryDTO.negative = "negative";
-        historyCovidCountryDTO.hospitalizedCurrently = "hospitalizedCurrently";
-        historyCovidCountryDTO.hospitalizedCumulative = "hospitalizedCumulative";
-        historyCovidCountryDTO.recovered = "recovered";
-        historyCovidCountryDTO.death = "death";
-
         List<HistoryCovidCountryDTO> historyCovidCountryDTOList = new ArrayList<>();
-        historyCovidCountryDTOList.add(historyCovidCountryDTO);
-        historyCovidCountryDTOList.add(historyCovidCountryDTO);
-        historyCovidCountryDTOList.add(historyCovidCountryDTO);
-        historyCovidCountryDTOList.add(historyCovidCountryDTO);
 
+        for (HistoryCovidCountry historyCovidCountry : historyCovidCountryList) {
+            HistoryCovidCountryDTO historyCovidCountryDTO = new HistoryCovidCountryDTO();
+            historyCovidCountryDTO.date = historyCovidCountry.date;
+            historyCovidCountryDTO.states = historyCovidCountry.states;
+            historyCovidCountryDTO.positive = historyCovidCountry.positive;
+            historyCovidCountryDTO.negative = historyCovidCountry.negative;
+            historyCovidCountryDTO.hospitalizedCurrently = historyCovidCountry.hospitalizedCurrently;
+            historyCovidCountryDTO.hospitalizedCumulative = historyCovidCountry.hospitalizedCumulative;
+            historyCovidCountryDTO.recovered = historyCovidCountry.recovered;
+            historyCovidCountryDTO.death = historyCovidCountry.death;
+            historyCovidCountryDTOList.add(historyCovidCountryDTO);
+        }
         this.historyCovidCountryDTOList = historyCovidCountryDTOList;
     }
 
