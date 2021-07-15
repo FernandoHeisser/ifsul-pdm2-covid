@@ -1,12 +1,10 @@
 package com.example.exercicio.ui.HistoryCovidState;
 
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.exercicio.R;
@@ -18,7 +16,6 @@ public class HistoryCovidStateARVH extends RecyclerView.Adapter<HistoryCovidStat
 
     private final List<HistoryCovidStateDTO> historyCovidStateDTOList;
 
-    @RequiresApi(api = Build.VERSION_CODES.R)
     public HistoryCovidStateARVH(List<HistoryCovidState> historyCovidStateList) {
         List<HistoryCovidStateDTO> historyCovidStateDTOList = new ArrayList<>();
 

@@ -35,5 +35,7 @@ public class CurrentCovidStateFragment extends Fragment {
     }
 
     @Override
-    public void onDestroyView() { super.onDestroyView(); }
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
 }

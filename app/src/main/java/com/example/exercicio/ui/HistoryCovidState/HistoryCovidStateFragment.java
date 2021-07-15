@@ -29,7 +29,12 @@ public class HistoryCovidStateFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        recyclerView.setAdapter(new HistoryCovidStateARVH(historyCovidStateList));
+
+        if (historyCovidStateList == null) {
+            getFragmentManager().beginTransaction().detach(this).attach(this).commit();
+        } else {
+            recyclerView.setAdapter(new HistoryCovidStateARVH(historyCovidStateList));
+        }
 
         return view;
     }
